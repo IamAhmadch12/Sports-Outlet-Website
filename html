@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apex Sports</title>
+
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'League Spartan',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0a3d2b,#1e1e1e,#8ea604);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+background:linear-gradient(45deg,#e7ff0f,#18ff8b);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav ul li{
+cursor:pointer;
+transition:0.3s;
+}
+
+nav ul li:hover{
+color:#d4ff00;
+transform:translateY(-3px);
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1517649763962-0c623066013b") center/cover;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+animation:fadeIn 2s ease;
+}
+
+.hero h1{
+font-size:80px;
+background:linear-gradient(90deg,#d9ff00,#0aff84);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:22px;
+margin-top:10px;
+}
+
+/* PRODUCTS */
+
+.section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:45px;
+margin-bottom:50px;
+text-align:center;
+background:linear-gradient(90deg,#e7ff0f,#15ff8c);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+/* PARALLELOGRAM CARD */
+
+.card{
+background:#111;
+padding:20px;
+transform:skewY(-3deg);
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.7);
+transition:0.8s;
+}
+
+.card:hover{
+transform:scale(1.05) skewY(-3deg);
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.card h3{
+margin-top:10px;
+}
+
+/* ATHLETES */
+
+.athletes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+.athlete{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+}
+
+.athlete img{
+width:100%;
+transition:0.5s;
+}
+
+.athlete:hover img{
+transform:scale(1.2);
+}
+
+.athlete-title{
+position:absolute;
+bottom:20px;
+left:20px;
+font-size:30px;
+background:rgba(0,0,0,0.7);
+padding:10px;
+}
+
+/* SHOES */
+
+.shoes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:60px;
+text-align:center;
+}
+
+footer h2{
+margin-bottom:20px;
+}
+
+.contact{
+margin-top:20px;
+line-height:2;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(50px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">APEX SPORTS</div>
+
+<ul>
+<li>Home</li>
+<li>Men</li>
+<li>Women</li>
+<li>Kids</li>
+<li>Outwear</li>
+<li>Bottoms</li>
+<li>Tops</li>
+<li>Sports Kit</li>
+<li>Special Offers</li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>APEX SPORTS</h1>
+<p>Elite Gear for Elite Athletes</p>
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">Top Sports Categories</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+<h3>Cricket Equipment</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511886929837-354d827aae26">
+<h3>Football Gear</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55">
+<h3>Basketball</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504457047772-27faf1c00561">
+<h3>Badminton</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">Elite Athletes</h2>
+
+<div class="athletes">
+
+<div class="athlete">
+<img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d">
+<div class="athlete-title">Cricket</div>
+</div>
+
+<div class="athlete">
+<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
+<div class="athlete-title">Football</div>
+</div>
+
+<div class="athlete">
+<img src="https://images.unsplash.com/photo-1519861531473-9200262188bf">
+<div class="athlete-title">Basketball</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">Shoes Collection</h2>
+
+<div class="shoes-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<h3>Nike</h3>
+<p>Size 36-44</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77">
+<h3>Puma</h3>
+<p>Size 36-44</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<h3>Asics</h3>
+<p>Size 36-44</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a">
+<h3>Ndure</h3>
+<p>Size 36-44</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">Cricket Equipment</h2>
+
+<div class="products">
+
+<div class="card"><h3>Bats</h3>
+<p>Gray Nicolls, MRF, SS, GM, New Balance</p></div>
+
+<div class="card"><h3>Balls</h3>
+<p>Hard Ball, Tennis Ball, Synthetic Ball, Rubber Ball</p></div>
+
+<div class="card"><h3>Kits</h3>
+<p>Pakistan, India, Australia Team Kits</p></div>
+
+<div class="card"><h3>Protection</h3>
+<p>Helmets, Gloves, Pads</p></div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h2>About Apex Sports</h2>
+
+<p>Elite sports store providing premium equipment for athletes worldwide.</p>
+
+<div class="contact">
+
+<p>Email: apexsports1992@gmail.com</p>
+<p>Phone: +923246537803</p>
+
+<p>Our Journey | How Can We Help | Contact Us</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
